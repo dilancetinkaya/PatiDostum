@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PatiDostum.Core.Entities;
+
+    public class DistrictEntity
+    {
+    public Guid Id { get; set; }
+    public string DistrictName { get; set; }
+    public int DistrictKey { get; set; }
+    [ForeignKey("ProvinceId")]
+    public virtual ProvinceEntity Province { get; set; }
+    public Guid ProvinceId { get; set; }
+
+}
+
